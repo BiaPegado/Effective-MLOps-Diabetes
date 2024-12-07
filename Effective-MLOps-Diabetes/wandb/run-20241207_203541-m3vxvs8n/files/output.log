@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\wandb_config.py", line 165, in __getattr__
+    return self.__getitem__(key)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\wandb_config.py", line 130, in __getitem__
+    return self._items[key]
+           ~~~~~~~~~~~^^^^^
+KeyError: 'solver'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 154, in <module>
+    train_model(train_config)
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 114, in train_model
+    solver = config.solver
+             ^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\wandb_config.py", line 167, in __getattr__
+    raise AttributeError(
+AttributeError: <class 'wandb.sdk.wandb_config.Config'> object has no attribute 'solver'

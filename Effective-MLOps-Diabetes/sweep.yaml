@@ -1,0 +1,26 @@
+# The program to run
+program: train.py
+
+# Method can be grid, random or bayes
+method: random
+
+# Project this sweep is part of
+project: mlops-course-assignment
+entity: abiapegado014-ufrn
+
+# Metric to optimize
+metric:
+  name: val_accuracy
+  goal: maximize
+
+
+# Parameters space to search
+parameters:
+  log_preds:
+    value: False
+  solver:
+    values: ['lbfgs', 'liblinear', 'saga'] 
+  max_iter:
+    values: [30, 40, 50]  
+  class_weight:
+    values: ['balanced', null]  

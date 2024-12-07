@@ -1,0 +1,106 @@
+2024-12-07 19:25:03 ERROR 403 response executing GraphQL.
+2024-12-07 19:25:03 ERROR {"errors":[{"message":"permission denied","path":["upsertSweep"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertSweep":null}}
+2024-12-07 19:25:03 ERROR Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 887, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+                         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\internal.py", line 133, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 57, in wrapper
+    raise err
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3340, in upsert_sweep
+    raise e
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3334, in upsert_sweep
+    response = self.gql(
+               ^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 372, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\util.py", line 880, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.errors.UsageError: permission denied
+
+2024-12-07 19:26:15 ERROR 403 response executing GraphQL.
+2024-12-07 19:26:15 ERROR {"errors":[{"message":"permission denied","path":["upsertSweep"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertSweep":null}}
+2024-12-07 19:26:15 ERROR Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 887, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+                         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\internal.py", line 133, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 57, in wrapper
+    raise err
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3340, in upsert_sweep
+    raise e
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3334, in upsert_sweep
+    response = self.gql(
+               ^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 372, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\util.py", line 880, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.errors.UsageError: permission denied
+

@@ -1,0 +1,663 @@
+2024-12-07 19:25:03 ERROR 403 response executing GraphQL.
+2024-12-07 19:25:03 ERROR {"errors":[{"message":"permission denied","path":["upsertSweep"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertSweep":null}}
+2024-12-07 19:25:03 ERROR Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 887, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+                         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\internal.py", line 133, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 57, in wrapper
+    raise err
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3340, in upsert_sweep
+    raise e
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3334, in upsert_sweep
+    response = self.gql(
+               ^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 372, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\util.py", line 880, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.errors.UsageError: permission denied
+
+2024-12-07 19:26:15 ERROR 403 response executing GraphQL.
+2024-12-07 19:26:15 ERROR {"errors":[{"message":"permission denied","path":["upsertSweep"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertSweep":null}}
+2024-12-07 19:26:15 ERROR Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 887, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+                         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\internal.py", line 133, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 57, in wrapper
+    raise err
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3340, in upsert_sweep
+    raise e
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3334, in upsert_sweep
+    response = self.gql(
+               ^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 372, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\util.py", line 880, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.errors.UsageError: permission denied
+
+2024-12-07 19:29:59 ERROR 403 response executing GraphQL.
+2024-12-07 19:29:59 ERROR {"errors":[{"message":"permission denied","path":["upsertSweep"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertSweep":null}}
+2024-12-07 19:29:59 ERROR Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 887, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+                         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\internal.py", line 133, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 57, in wrapper
+    raise err
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3340, in upsert_sweep
+    raise e
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3334, in upsert_sweep
+    response = self.gql(
+               ^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 372, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\util.py", line 880, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.errors.UsageError: permission denied
+
+2024-12-07 19:31:44 ERROR 403 response executing GraphQL.
+2024-12-07 19:31:44 ERROR {"errors":[{"message":"permission denied","path":["upsertSweep"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertSweep":null}}
+2024-12-07 19:31:44 ERROR Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 400, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\cli\cli.py", line 887, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+                         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\internal.py", line 133, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 57, in wrapper
+    raise err
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3340, in upsert_sweep
+    raise e
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 3334, in upsert_sweep
+    response = self.gql(
+               ^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\internal\internal_api.py", line 372, in gql
+    ret = self._retry_gql(
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\util.py", line 880, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.errors.UsageError: permission denied
+
+2024-12-07 19:34:36 INFO Running runs: []
+2024-12-07 19:34:37 INFO Agent received command: run
+2024-12-07 19:34:37 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:34:37 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=liblinear
+2024-12-07 19:34:42 INFO Running runs: ['mlrp240e']
+2024-12-07 19:35:13 INFO Cleaning up finished run: mlrp240e
+2024-12-07 19:35:13 INFO Agent received command: run
+2024-12-07 19:35:13 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: saga
+2024-12-07 19:35:13 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=saga
+2024-12-07 19:35:18 INFO Running runs: ['wrlh88rw']
+2024-12-07 19:35:45 INFO Cleaning up finished run: wrlh88rw
+2024-12-07 19:35:45 INFO Agent received command: run
+2024-12-07 19:35:45 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:35:45 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=50 --random_state=42 --solver=lbfgs
+2024-12-07 19:35:50 INFO Running runs: ['ggrtu0y0']
+2024-12-07 19:36:16 INFO Cleaning up finished run: ggrtu0y0
+2024-12-07 19:36:17 INFO Agent received command: run
+2024-12-07 19:36:17 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: saga
+2024-12-07 19:36:17 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=saga
+2024-12-07 19:36:22 INFO Running runs: ['aawhfk8l']
+2024-12-07 19:44:37 INFO Running runs: []
+2024-12-07 19:44:38 INFO Agent received command: run
+2024-12-07 19:44:38 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:44:38 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=lbfgs
+2024-12-07 19:44:43 INFO Running runs: ['mkzy8hve']
+2024-12-07 19:45:03 INFO Cleaning up finished run: mkzy8hve
+2024-12-07 19:45:04 INFO Agent received command: run
+2024-12-07 19:45:04 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:45:04 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=liblinear
+2024-12-07 19:45:09 INFO Running runs: ['mnbj5xe1']
+2024-12-07 19:45:59 INFO Running runs: []
+2024-12-07 19:46:01 INFO Agent received command: run
+2024-12-07 19:46:01 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: saga
+2024-12-07 19:46:01 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=saga
+2024-12-07 19:46:06 INFO Running runs: ['5fn9whli']
+2024-12-07 19:46:27 INFO Cleaning up finished run: 5fn9whli
+2024-12-07 19:46:27 INFO Agent received command: run
+2024-12-07 19:46:27 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:46:27 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=lbfgs
+2024-12-07 19:47:07 INFO Running runs: []
+2024-12-07 19:47:07 INFO Agent received command: run
+2024-12-07 19:47:07 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: saga
+2024-12-07 19:47:07 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=saga
+2024-12-07 19:47:12 INFO Running runs: ['9gc5tmo7']
+2024-12-07 19:47:33 INFO Cleaning up finished run: 9gc5tmo7
+2024-12-07 19:47:33 INFO Agent received command: run
+2024-12-07 19:47:33 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:47:33 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=40 --random_state=42 --solver=liblinear
+2024-12-07 19:47:38 INFO Running runs: ['hplbp5i7']
+2024-12-07 19:47:59 INFO Cleaning up finished run: hplbp5i7
+2024-12-07 19:48:26 INFO Running runs: []
+2024-12-07 19:48:26 INFO Agent received command: run
+2024-12-07 19:48:26 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:48:26 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=40 --random_state=42 --solver=lbfgs
+2024-12-07 19:48:31 INFO Running runs: ['ws1p7u7w']
+2024-12-07 19:48:52 INFO Cleaning up finished run: ws1p7u7w
+2024-12-07 19:48:53 INFO Agent received command: run
+2024-12-07 19:48:53 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: saga
+2024-12-07 19:48:53 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=saga
+2024-12-07 19:48:58 INFO Running runs: ['2pqgfvcn']
+2024-12-07 19:49:24 INFO Cleaning up finished run: 2pqgfvcn
+2024-12-07 19:49:24 INFO Agent received command: run
+2024-12-07 19:49:24 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:49:24 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=40 --random_state=42 --solver=liblinear
+2024-12-07 19:49:29 INFO Running runs: ['czai57j1']
+2024-12-07 19:49:50 INFO Cleaning up finished run: czai57j1
+2024-12-07 19:49:51 INFO Agent received command: run
+2024-12-07 19:49:51 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:49:51 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=lbfgs
+2024-12-07 19:49:56 INFO Running runs: ['lfz0df17']
+2024-12-07 19:50:16 INFO Cleaning up finished run: lfz0df17
+2024-12-07 19:50:17 INFO Agent received command: run
+2024-12-07 19:50:17 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: saga
+2024-12-07 19:50:17 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=saga
+2024-12-07 19:50:22 INFO Running runs: ['5mngxu9t']
+2024-12-07 19:50:43 INFO Cleaning up finished run: 5mngxu9t
+2024-12-07 19:50:43 INFO Agent received command: run
+2024-12-07 19:50:43 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: saga
+2024-12-07 19:50:43 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=40 --random_state=42 --solver=saga
+2024-12-07 19:50:48 INFO Running runs: ['u1l31v5o']
+2024-12-07 19:51:14 INFO Cleaning up finished run: u1l31v5o
+2024-12-07 19:51:15 INFO Agent received command: run
+2024-12-07 19:51:15 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:51:15 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=liblinear
+2024-12-07 19:51:20 INFO Running runs: ['08odwji7']
+2024-12-07 19:51:41 INFO Cleaning up finished run: 08odwji7
+2024-12-07 19:51:41 INFO Agent received command: run
+2024-12-07 19:51:41 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: saga
+2024-12-07 19:51:41 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=40 --random_state=42 --solver=saga
+2024-12-07 19:51:46 INFO Running runs: ['n080jwju']
+2024-12-07 19:52:07 INFO Cleaning up finished run: n080jwju
+2024-12-07 19:52:07 INFO Agent received command: run
+2024-12-07 19:52:07 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: saga
+2024-12-07 19:52:07 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=saga
+2024-12-07 19:52:12 INFO Running runs: ['30g33xj0']
+2024-12-07 19:52:38 INFO Cleaning up finished run: 30g33xj0
+2024-12-07 19:52:39 INFO Agent received command: run
+2024-12-07 19:52:39 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:52:39 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=liblinear
+2024-12-07 19:52:44 INFO Running runs: ['9oboc2c7']
+2024-12-07 19:56:39 INFO Running runs: []
+2024-12-07 19:56:39 INFO Agent received command: run
+2024-12-07 19:56:39 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:56:39 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=50 --random_state=42 --solver=lbfgs
+2024-12-07 19:56:44 INFO Running runs: ['hs9yti48']
+2024-12-07 19:57:10 INFO Cleaning up finished run: hs9yti48
+2024-12-07 19:57:11 INFO Agent received command: run
+2024-12-07 19:57:11 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:57:11 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=lbfgs
+2024-12-07 19:57:16 INFO Running runs: ['98paxz5s']
+2024-12-07 19:57:42 INFO Cleaning up finished run: 98paxz5s
+2024-12-07 19:57:42 INFO Agent received command: run
+2024-12-07 19:57:42 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: saga
+2024-12-07 19:57:42 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=saga
+2024-12-07 19:57:47 INFO Running runs: ['rwtx331u']
+2024-12-07 19:58:08 INFO Cleaning up finished run: rwtx331u
+2024-12-07 19:58:09 INFO Agent received command: run
+2024-12-07 19:58:09 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:58:09 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=40 --random_state=42 --solver=liblinear
+2024-12-07 19:58:14 INFO Running runs: ['6n4cwa1n']
+2024-12-07 19:58:40 INFO Cleaning up finished run: 6n4cwa1n
+2024-12-07 19:58:40 INFO Agent received command: run
+2024-12-07 19:58:40 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:58:40 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=lbfgs
+2024-12-07 19:58:45 INFO Running runs: ['85wsceu0']
+2024-12-07 19:59:06 INFO Cleaning up finished run: 85wsceu0
+2024-12-07 19:59:07 INFO Agent received command: run
+2024-12-07 19:59:07 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: liblinear
+2024-12-07 19:59:07 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=50 --random_state=42 --solver=liblinear
+2024-12-07 19:59:12 INFO Running runs: ['f1kuchhm']
+2024-12-07 19:59:38 INFO Cleaning up finished run: f1kuchhm
+2024-12-07 19:59:38 INFO Agent received command: run
+2024-12-07 19:59:38 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: lbfgs
+2024-12-07 19:59:38 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=lbfgs
+2024-12-07 19:59:43 INFO Running runs: ['vuci6dqh']
+2024-12-07 20:00:09 INFO Cleaning up finished run: vuci6dqh
+2024-12-07 20:00:09 INFO Agent received command: run
+2024-12-07 20:00:09 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: lbfgs
+2024-12-07 20:00:09 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=lbfgs
+2024-12-07 20:00:14 INFO Running runs: ['z4z4us84']
+2024-12-07 20:00:35 INFO Cleaning up finished run: z4z4us84
+2024-12-07 20:00:36 INFO Agent received command: run
+2024-12-07 20:00:36 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: lbfgs
+2024-12-07 20:00:36 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=lbfgs
+2024-12-07 20:00:41 INFO Running runs: ['ajg8fx5n']
+2024-12-07 20:01:02 INFO Cleaning up finished run: ajg8fx5n
+2024-12-07 20:01:02 INFO Agent received command: run
+2024-12-07 20:01:02 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: lbfgs
+2024-12-07 20:01:02 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=50 --random_state=42 --solver=lbfgs
+2024-12-07 20:01:07 INFO Running runs: ['evvkubfp']
+2024-12-07 20:01:33 INFO Cleaning up finished run: evvkubfp
+2024-12-07 20:01:33 INFO Agent received command: run
+2024-12-07 20:01:33 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: saga
+2024-12-07 20:01:33 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=40 --random_state=42 --solver=saga
+2024-12-07 20:01:38 INFO Running runs: ['kid35q7w']
+2024-12-07 20:01:59 INFO Cleaning up finished run: kid35q7w
+2024-12-07 20:02:00 INFO Agent received command: run
+2024-12-07 20:02:00 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: liblinear
+2024-12-07 20:02:00 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=40 --random_state=42 --solver=liblinear
+2024-12-07 20:02:05 INFO Running runs: ['y0ng7l6w']
+2024-12-07 20:02:26 INFO Cleaning up finished run: y0ng7l6w
+2024-12-07 20:02:26 INFO Agent received command: run
+2024-12-07 20:02:26 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: lbfgs
+2024-12-07 20:02:26 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=lbfgs
+2024-12-07 20:02:31 INFO Running runs: ['yeasxyyc']
+2024-12-07 20:02:57 INFO Cleaning up finished run: yeasxyyc
+2024-12-07 20:02:57 INFO Agent received command: run
+2024-12-07 20:02:57 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: liblinear
+2024-12-07 20:02:57 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=liblinear
+2024-12-07 20:03:02 INFO Running runs: ['qp5aio7n']
+2024-12-07 20:03:23 INFO Cleaning up finished run: qp5aio7n
+2024-12-07 20:03:24 INFO Agent received command: run
+2024-12-07 20:03:24 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: saga
+2024-12-07 20:03:24 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=40 --random_state=42 --solver=saga
+2024-12-07 20:03:29 INFO Running runs: ['j9cuw143']
+2024-12-07 20:03:55 INFO Cleaning up finished run: j9cuw143
+2024-12-07 20:03:55 INFO Agent received command: run
+2024-12-07 20:03:55 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: saga
+2024-12-07 20:03:55 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=40 --random_state=42 --solver=saga
+2024-12-07 20:04:00 INFO Running runs: ['3mjmj56l']
+2024-12-07 20:04:21 INFO Cleaning up finished run: 3mjmj56l
+2024-12-07 20:04:21 INFO Agent received command: run
+2024-12-07 20:04:21 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: liblinear
+2024-12-07 20:04:21 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=30 --random_state=42 --solver=liblinear
+2024-12-07 20:04:26 INFO Running runs: ['rptekjpp']
+2024-12-07 20:04:47 INFO Cleaning up finished run: rptekjpp
+2024-12-07 20:04:48 INFO Agent received command: run
+2024-12-07 20:04:48 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: saga
+2024-12-07 20:04:48 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=saga
+2024-12-07 20:04:53 INFO Running runs: ['rpbtho7q']
+2024-12-07 20:05:14 INFO Cleaning up finished run: rpbtho7q
+2024-12-07 20:05:14 INFO Agent received command: run
+2024-12-07 20:05:14 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: liblinear
+2024-12-07 20:05:14 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=liblinear
+2024-12-07 20:05:19 INFO Running runs: ['c8ju27v0']
+2024-12-07 20:05:45 INFO Cleaning up finished run: c8ju27v0
+2024-12-07 20:05:45 INFO Agent received command: run
+2024-12-07 20:05:45 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: saga
+2024-12-07 20:05:45 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=40 --random_state=42 --solver=saga
+2024-12-07 20:05:50 INFO Running runs: ['yf6zjock']
+2024-12-07 20:06:16 INFO Cleaning up finished run: yf6zjock
+2024-12-07 20:06:17 INFO Agent received command: run
+2024-12-07 20:06:17 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: liblinear
+2024-12-07 20:06:17 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=liblinear
+2024-12-07 20:06:22 INFO Running runs: ['qt7we3hv']
+2024-12-07 20:06:43 INFO Cleaning up finished run: qt7we3hv
+2024-12-07 20:06:43 INFO Agent received command: run
+2024-12-07 20:06:43 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 40
+	random_state: 42
+	solver: saga
+2024-12-07 20:06:43 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=40 --random_state=42 --solver=saga
+2024-12-07 20:06:48 INFO Running runs: ['9g1l9p5r']
+2024-12-07 20:07:09 INFO Cleaning up finished run: 9g1l9p5r
+2024-12-07 20:07:09 INFO Agent received command: run
+2024-12-07 20:07:09 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: liblinear
+2024-12-07 20:07:09 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=liblinear
+2024-12-07 20:07:14 INFO Running runs: ['0jztcr51']
+2024-12-07 20:07:35 INFO Cleaning up finished run: 0jztcr51
+2024-12-07 20:07:36 INFO Agent received command: run
+2024-12-07 20:07:36 INFO Agent starting run with config:
+	class_weight: None
+	log_preds: False
+	max_iter: 50
+	random_state: 42
+	solver: saga
+2024-12-07 20:07:36 INFO About to run command: python train.py --class_weight=None --log_preds=False --max_iter=50 --random_state=42 --solver=saga
+2024-12-07 20:07:41 INFO Running runs: ['lmvpzq6m']
+2024-12-07 20:08:07 INFO Cleaning up finished run: lmvpzq6m
+2024-12-07 20:08:07 INFO Agent received command: run
+2024-12-07 20:08:07 INFO Agent starting run with config:
+	class_weight: balanced
+	log_preds: False
+	max_iter: 30
+	random_state: 42
+	solver: saga
+2024-12-07 20:08:07 INFO About to run command: python train.py --class_weight=balanced --log_preds=False --max_iter=30 --random_state=42 --solver=saga
+2024-12-07 20:08:12 INFO Running runs: ['rpyn9e2y']
+2024-12-07 20:08:38 INFO Cleaning up finished run: rpyn9e2y

@@ -1,0 +1,29 @@
+wandb:   3 of 3 files downloaded.  
+wandb:   3 of 3 files downloaded.  
+C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py:486: UserWarning: X has feature names, but LogisticRegression was fitted without feature names
+  warnings.warn(
+==== Resultados - Validação ====
+Acurácia: 0.8167
+              precision    recall  f1-score   support
+
+           0       0.91      0.70      0.79        30
+           1       0.76      0.93      0.84        30
+
+    accuracy                           0.82        60
+   macro avg       0.83      0.82      0.81        60
+weighted avg       0.83      0.82      0.81        60
+
+
+==== Resultados - Teste ====
+Acurácia: 0.5167
+              precision    recall  f1-score   support
+
+           0       1.00      0.03      0.06        30
+           1       0.51      1.00      0.67        30
+
+    accuracy                           0.52        60
+   macro avg       0.75      0.52      0.37        60
+weighted avg       0.75      0.52      0.37        60
+wandb:   3 of 3 files downloaded.  
+
+Final metrics logged.

@@ -1,0 +1,82 @@
+Traceback (most recent call last):
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 134, in <module>
+    train_model(train_config)
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 108, in train_model
+    X_train, y_train, X_val, y_val = split()
+                                     ^^^^^^^
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 59, in split
+    df_train, df_valid = get_df(is_test=False)
+                         ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 47, in get_df
+    df = preprocess_data()
+         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 39, in preprocess_data
+    df = download_data()
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 33, in download_data
+    processed_data_at = wandb.use_artifact(f'{train_config.processed_data_at}:latest')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\wandb_run.py", line 403, in wrapper_fn
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\wandb_run.py", line 393, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\wandb_run.py", line 3071, in use_artifact
+    artifact = public_api._artifact(type=type, name=name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\public\api.py", line 1210, in _artifact
+    artifact = wandb.Artifact._from_name(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\artifacts\artifact.py", line 270, in _from_name
+    response = client.execute(
+               ^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\apis\public\api.py", line 72, in execute
+    return self._client.execute(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+KeyboardInterrupt

@@ -1,0 +1,19 @@
+{"time":"2024-12-07T20:39:49.5694908-03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-07T20:39:49.5694908-03:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\abia0\\OneDrive\\Área de Trabalho\\Projetos\\Faculdade\\topicos_especiais\\Effective-MLops\\wandb\\run-20241207_203949-2qexfom0\\logs\\debug-core.log"}
+{"time":"2024-12-07T20:39:49.6856199-03:00","level":"INFO","msg":"created new stream","id":"2qexfom0"}
+{"time":"2024-12-07T20:39:49.6856199-03:00","level":"INFO","msg":"stream: started","id":"2qexfom0"}
+{"time":"2024-12-07T20:39:49.6856199-03:00","level":"INFO","msg":"writer: Do: started","stream_id":"2qexfom0"}
+{"time":"2024-12-07T20:39:49.6856199-03:00","level":"INFO","msg":"handler: started","stream_id":"2qexfom0"}
+{"time":"2024-12-07T20:39:49.6856199-03:00","level":"INFO","msg":"sender: started","stream_id":"2qexfom0"}
+{"time":"2024-12-07T20:39:50.1506187-03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-07T20:39:57.4232262-03:00","level":"INFO","msg":"stream: closing","id":"2qexfom0"}
+{"time":"2024-12-07T20:39:57.4232262-03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-07T20:39:57.4237481-03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-07T20:39:58.9508974-03:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-12-07T20:39:58.9508974-03:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-12-07T20:39:58.9508974-03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-12-07T20:39:59.0022297-03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-07T20:39:59.3662263-03:00","level":"INFO","msg":"handler: closed","stream_id":"2qexfom0"}
+{"time":"2024-12-07T20:39:59.3662263-03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"2qexfom0"}
+{"time":"2024-12-07T20:39:59.3662263-03:00","level":"INFO","msg":"sender: closed","stream_id":"2qexfom0"}
+{"time":"2024-12-07T20:39:59.3669812-03:00","level":"INFO","msg":"stream: closed","id":"2qexfom0"}

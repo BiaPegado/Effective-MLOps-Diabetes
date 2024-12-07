@@ -1,0 +1,15 @@
+
+[34m[1mwandb[39m[22m:   3 of 3 files downloaded.
+[34m[1mwandb[39m[22m:   3 of 3 files downloaded.
+Traceback (most recent call last):
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 152, in <module>
+    train_model(train_config)
+  File "C:\Users\abia0\OneDrive\Área de Trabalho\Projetos\Faculdade\topicos_especiais\Effective-MLops\train.py", line 133, in train_model
+    model.fit(X_train, y_train)
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 1466, in wrapper
+    estimator._validate_params()
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\base.py", line 666, in _validate_params
+    validate_parameter_constraints(
+  File "C:\Users\abia0\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sklearn\utils\_param_validation.py", line 95, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'class_weight' parameter of LogisticRegression must be an instance of 'dict', a str among {'balanced'} or None. Got 'None' instead.

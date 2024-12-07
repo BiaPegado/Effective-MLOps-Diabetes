@@ -1,0 +1,59 @@
+{
+    "os": "Windows-10-10.0.26100-SP0",
+    "python": "3.11.9",
+    "heartbeatAt": "2024-12-07T23:06:01.258506",
+    "startedAt": "2024-12-07T23:06:00.549716",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--class_weight=balanced",
+        "--log_preds=False",
+        "--max_iter=40",
+        "--random_state=42",
+        "--solver=saga"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\abia0\\OneDrive\\\u00c1rea de Trabalho\\Projetos\\Faculdade\\topicos_especiais\\Effective-MLops\\train.py",
+    "codePathLocal": "train.py",
+    "codePath": "Effective-MLops\\train.py",
+    "git": {
+        "remote": null,
+        "commit": null
+    },
+    "email": "apegado014@gmail.com",
+    "root": "C:/Users/abia0/OneDrive/\u00c1rea de Trabalho/Projetos/Faculdade/topicos_especiais",
+    "host": "LOQuinho",
+    "username": "abia0",
+    "executable": "C:\\Users\\abia0\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2000.0,
+        "min": 0.0,
+        "max": 2000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2000.0,
+            "min": 0.0,
+            "max": 2000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 474.71581649780273,
+            "used": 356.55864334106445
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2050",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.730522155761719
+    }
+}

@@ -1,0 +1,20 @@
+{"time":"2024-12-07T19:08:27.7690681-03:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-12-07T19:08:27.7690681-03:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\abia0\\OneDrive\\Área de Trabalho\\Projetos\\Faculdade\\topicos_especiais\\Effective-MLops\\wandb\\run-20241207_190827-hf5zrq1o\\logs\\debug-core.log"}
+{"time":"2024-12-07T19:08:27.8845905-03:00","level":"INFO","msg":"created new stream","id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:27.8845905-03:00","level":"INFO","msg":"stream: started","id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:27.8845905-03:00","level":"INFO","msg":"writer: Do: started","stream_id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:27.8845905-03:00","level":"INFO","msg":"handler: started","stream_id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:27.8845905-03:00","level":"INFO","msg":"sender: started","stream_id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:28.3626348-03:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-07T19:08:35.937674-03:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-07T19:08:35.9388363-03:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-07T19:08:36.9391505-03:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-hf5zrq1o-prediction_table","runtime_seconds":1.5244393}],"total_operations":1}}
+{"time":"2024-12-07T19:08:37.5331626-03:00","level":"WARN","msg":"No job ingredients found, not creating job artifact"}
+{"time":"2024-12-07T19:08:37.5331626-03:00","level":"WARN","msg":"No source type found, not creating job artifact"}
+{"time":"2024-12-07T19:08:37.5331626-03:00","level":"INFO","msg":"sender: sendDefer: no job artifact to save"}
+{"time":"2024-12-07T19:08:37.5839736-03:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-07T19:08:38.9416798-03:00","level":"INFO","msg":"stream: closing","id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:38.9416798-03:00","level":"INFO","msg":"handler: closed","stream_id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:38.9416798-03:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:38.9442316-03:00","level":"INFO","msg":"sender: closed","stream_id":"hf5zrq1o"}
+{"time":"2024-12-07T19:08:38.9442316-03:00","level":"INFO","msg":"stream: closed","id":"hf5zrq1o"}

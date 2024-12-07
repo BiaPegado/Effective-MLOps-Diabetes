@@ -1,0 +1,12 @@
+wandb_version: 1
+
+class_weight:
+  value: None
+log_preds:
+  value: false
+max_iter:
+  value: 40
+random_state:
+  value: 42
+solver:
+  value: saga
